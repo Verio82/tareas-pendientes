@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tareas Pendientes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>📝 Tareas Pendientes</h1>
+
+  <form id="task-form">
+    <input type="hidden" id="task-id">
+
+    <input type="text" id="title" placeholder="Título" required>
+    <input type="text" id="description" placeholder="Descripción" required>
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Completada</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tasks-table"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
