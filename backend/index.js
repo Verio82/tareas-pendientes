@@ -16,6 +16,18 @@ app.use(express.json());
 // Rutas
 app.use("/tasks", tasksRoutes);
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "API de Tareas Pendientes",
+    endpoints: {
+      get: "GET /tasks",
+      post: "POST /tasks",
+      put: "PUT /tasks/:id",
+      delete: "DELETE /tasks/:id"
+    }
+  });
+});
+
 // Servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
